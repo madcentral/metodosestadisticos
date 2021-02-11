@@ -1,99 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
-<title>MÉTODOS ESTADÍSTICOS</title>
+<html LANG="ES">
+<title>Métodos Estadísticos - Ucentral</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="fontawesome-free-5.15.2-web/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2021.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+<link rel="icon" href="w3images/favicon.ico">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 </style>
-<body>
+<body class="w3-content" style="max-width:100%">
 
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ANUNCIOS</a>
-    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CUADERNOS</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACTO</a>
-    </div>
-    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-animate-left" style="z-index:3;width:300px;background-color: #2e2e97; color:white" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right  w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="images/mn.jpg"  alt="imagencurso" style="width:45%;" class="w3-round"><br><br>
+    <h4><b>MÉTODOS ESTADÍSTICOS</b></h4>
+    <p class="w3-text-white">Universidad Central</p>
   </div>
-</div>
+  <div class="w3-bar-block">
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fas fa-chalkboard fa-fw w3-margin-right"></i>CURSO</a>
+    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding "><i class="fa fa-th-large fa-fw w3-margin-right"></i>MATERIAL</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACTO</a>
+  </div>
+  <a href="https://www.ucentral.edu.co"><img src="https://www.ucentral.edu.co/themes/ucentral/img/template/Universidad%20Central.png" alt="ucentral" ></a>
+</nav>
 
-<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ANUNCIOS</a>
-  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CUADERNOS</a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACTO</a>
-</div>
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- Page content -->
-<div class="w3-content" style="max-width:2000px;margin-top:46px">
+<div class="w3-main" style="margin-left:300px; max-width:1200px">
 
-  <!-- Automatic Slideshow Images -->
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://www.ucentral.edu.co/sites/default/files/inline-images/maest-analitica-datos_0.jpg" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Maestría en Analítica de Datos</h3>
-      <p><b>Universidad Central</b></p>   
+  <header>
+    <a href="#"><img src="images/mn.jpg" alt="imagencurso"  style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container" id="about">
+      <h1>Metodos Estadísticos</h1>
+      <b class="w3-large">Universidad Central</b>
+      <div class="w3-section  w3-padding-16">
+        <i class="w3-large">Carlos Isaac Zainea Maya</i>
+        <br>
+        <a href="https://izainea.github.io"><i>www.izainea.github.io</i></a>
+      </div>
     </div>
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="https://www.ucentral.edu.co/sites/default/files/inline-images/maest-analitica-datos_0.jpg" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Maestría en Analítica de Datos</h3>
-      <p><b>Universidad Central</b></p>   
+  </header>
+
+  <div class="w3-container w3-padding-16 " style="max-width:1000px">
+    <h2 class="w3-wide">OBJETIVOS DEL CURSO</h2>
+    <div class="w3-panel w3-justify">
+      <p>En el curso se construyen los fundamentos teóricos de los principales métodos de la estadística exploratoria multidimensional y se trabajan sus aplicaciones, utilizando software especializado de uso libre y comercial. Las prácticas se orientan a la aplicación de los métodos a situaciones reales que requieren apropiación de los contextos específicos, a partir de la revisión de artículos, para realizar interpretaciones adecuadas de los datos y del fenómeno en general. Para el aprendizaje de la aplicación de los métodos, el estudiante deberá realizar talleres utilizando algunos paquetes estadísticos.</p>
+
+      </div>
     </div>
-  </div>
-  </div>
 
   <!-- The Band Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+  <div class="w3-container w3-padding-16" style="max-width:1000px" id="band">
     <h2 class="w3-wide">MÉTODOS ESTADÍSTICOS</h2>
     <p class="w3-opacity"><i>Una introducción a Machine Learning</i></p>
-    <p class="w3-justify">En el curso se construyen los fundamentos teóricos de los principales métodos de la estadística exploratoria multidimensional y se trabajan sus aplicaciones, utilizando software especializado de uso libre y comercial. Las prácticas se orientan a la aplicación de los métodos a situaciones reales que requieren apropiación de los contextos específicos, a partir de la revisión de artículos, para realizar interpretaciones adecuadas de los datos y del fenómeno en general. Para el aprendizaje de la aplicación de los métodos, el estudiante implementará los métodos usando los lenguajes Python y R.</p>
-    <h2 class="w3-wide">CONTENIDO</h2>
-    <ol class="w3-ol w3-border w3-white w3-text-grey" style="text-align:justify;">
-<li><strong>Aprendizaje no supervisado y sus aplicaciones</strong>
+    <p class="w3-panel w3-justify">En el curso se construyen los fundamentos teóricos de los principales métodos de la estadística exploratoria multidimensional y se trabajan sus aplicaciones, utilizando software especializado de uso libre y comercial. Las prácticas se orientan a la aplicación de los métodos a situaciones reales que requieren apropiación de los contextos específicos, a partir de la revisión de artículos, para realizar interpretaciones adecuadas de los datos y del fenómeno en general. Para el aprendizaje de la aplicación de los métodos, el estudiante implementará los métodos usando los lenguajes Python y R.</p>
+    <h2 class="w3-wide w3-padding-16 ">CONTENIDO</h2>
+    <ol class="w3-ol w3-border w3-white w3-text-grey w3-padding-32 w3-margin-right" style="text-align:justify;">
+<li class="w3-margin-right"><strong>Aprendizaje no supervisado y sus aplicaciones</strong>
 <em>Comprender los conceptos de aprendizaje no supervisado, los tipos de aprendizaje no supervisado y los retos que existen.</em></li>
-<li><strong>Análisis de componentes principales</strong>
+<li class="w3-margin-right"><strong>Análisis de componentes principales</strong>
 <em>Comprender el uso de componentes principales en situaciones de múltiples variables cuantitativas. Analiza la selección y uso de ACP.</em></li>
-<li><strong>Análisis de componentes principales</strong>
+<li class="w3-margin-right"><strong>Análisis de componentes principales</strong>
 <em><strong>Primer avance. Problema, justificación y objetivos.</strong></em> <em>Comprender el uso de componentes principales en situaciones de múltiples variables cuantitativas. Analiza la selección y uso de ACP.</em></li>
-<li><strong>Análisis Factorial</strong>
+<li class="w3-margin-right"><strong>Análisis Factorial</strong>
 <em>Utilizar el análisis factorial en situaciones de reducción de dimensionalidad. Realizar las fases exploratorias y confirmatorias de este tipo de análisis.</em></li>
-<li><strong>Análisis de correspondencias múltiples</strong>
+<li class="w3-margin-right"><strong>Análisis de correspondencias múltiples</strong>
 <em>Comprender las técnicas de visualización y correlación en variables categóricas. Aplicar la distancia Ji-cuadrado para analizar similitudes.</em></li>
-<li><strong>Agrupamiento. Agrupamiento Jerarquico</strong>
+<li class="w3-margin-right"><strong>Agrupamiento. Agrupamiento Jerarquico</strong>
 <em><strong>Segundo avance. Marco teórico – Previa metodología-</strong></em> <em>Estudiar el agrupamiento de individuos a través de múltiples atributos. Entender el agrupamiento por medio de métodos jerárquicos.</em></li>
-<li><strong>Agrupamiento de K-medias</strong>
+<li class="w3-margin-right"><strong>Agrupamiento de K-medias</strong>
 <em>Analizar el uso de agrupamiento de K-medias. Combinar el uso de métodos jerárquicos y de k-medias.</em></li>
-<li><strong>Otros agrupamientos</strong>
+<li class="w3-margin-right"><strong>Otros agrupamientos</strong>
 <em>Comprender el uso de agrupamientos basados en funciones de densidad.</em></li>
-<li><strong>Aprendizaje supervisado. Clasificación y regresión</strong>
+<li class="w3-margin-right"><strong>Aprendizaje supervisado. Clasificación y regresión</strong>
 <em>Comprender el uso de regresión para la predicción de eventos. Analizar la clasificación como método de discriminación de individuos.</em></li>
-<li><strong>Clasificación y regresión</strong>
+<li class="w3-margin-right"><strong>Clasificación y regresión</strong>
 <em><strong>Tercer avance – Metodología y primeros resultados.</strong></em> <em>Entender la función de decisión, Pronosticar probabilidades y manejar incertidumbre de clasificación.</em></li>
-<li><strong>Estimaciones de incertidumbre de clasificadores</strong>
+<li class="w3-margin-right"><strong>Estimaciones de incertidumbre de clasificadores</strong>
 <em>Usar árboles de decisión para clasificar y predecir comportamientos de individuos.</em></li>
-<li><em><strong>Árboles de decisión</strong></em>
+<li class="w3-margin-right"><em><strong>Árboles de decisión</strong></em>
 <em>Comprender el funcionamiento de clasificadores bayesianos “ingenuos” y su aplicación en predicción de eventos.</em></li>
-<li><strong>Clasificadores de Naive Bayes</strong>
+<li class="w3-margin-right"><strong>Clasificadores de Naive Bayes</strong>
 <em>Analizar el uso de máquinas de soporte vectorial para la clasificación y regresión con alta dimensionalidad.</em></li>
-<li><strong>Máquinas de soporte vectorial</strong></li>
-<li><strong>Exposiciones</strong>
+<li class="w3-margin-right"><strong>Máquinas de soporte vectorial</strong></li>
+<li class="w3-margin-right"><strong>Exposiciones</strong>
 <em><strong>Entrega Final</strong></em> <em>Diagnosticar la efectividad de la clasificación de los métodos anteriores en problemas de data mining.</em></li>
 </ol>
    
   </div>
 
   <!-- The Tour Section -->
-  <div class="w3-black" id="tour">
+  <div class="w3-black" id="portfolio">
     <div class="w3-row w3-padding-32">
       <div class="w3-third">
         <h3 style="text-align:center;">Introducción a la estadistica descriptiva multivariada</h3>
@@ -173,26 +186,47 @@ body {font-family: "Lato", sans-serif}
         <i class="fa fa-envelope" style="width:30px"> </i> Email Isaac Zainea: czaineam@ucentral.edu.co<br>
         <i class="fa fa-envelope" style="width:30px"> </i> Email Nelson Cruz: ncruzg@ucentral.edu.co<br>
       </div>
-      
+
     </div>
+    </div>
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 " style="background-color: #2e2e97 ;color: white">
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <h3>Isaac Zainea</h3>
+      <p>Este espacio es acdémico y está invitado a aprovechar en múltiples formas el material que encuentra aquí. No olvide referenciar.</p>
+      <p>Desarrollado por <a href="https://izainea.github.io" target="_blank" class="w3-teal">Isaac Zainea</a></p>
+    </div>
+
+    <div class="w3-half">
+      <h3>Más recursos</h3>
+      <ul class="w3-ul w3-hoverable">
+        <a href="https://izainea.github.io/Curso-Python/"><li class="w3-padding-16">
+          <img src="w3images/cp.png" alt="cursopython" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large w3-text-white">Curso Python</span><br>
+          <span  class="w3-text-white">Maestría en Analítica de Datos</span>
+        </li></a>
+        <a href="https://github.com/izainea"><li class="w3-padding-16">
+          <i  class="fab fa-github w3-left w3-margin-right" style='font-size:50px;color:white'></i>
+          <span class="w3-large w3-text-white">Repositorio </span><br>
+          <span class="w3-text-white">Isaac Zainea</span>
+        </li></a>
+      </ul>
+    </div>
+
+
+
   </div>
-  
+</footer>
+
+<div class="w3-black w3-center w3-padding-24"><p class="w3-right w3-small" >Powered by <a href="https://izainea.github.io" title="izainea" target="_blank" class="w3-hover-opacity"><i>Isaac Zainea</i></a></p></div>
+
+<!-- End page content -->
 <!-- End Page Content -->
 </div>
 
 <!-- Image of location/map -->
-<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
 
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
-  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer>
 
 <script>
 // Automatic Slideshow - change image every 4 seconds
